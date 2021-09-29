@@ -1,0 +1,42 @@
+.card {
+  background-color: $white;
+}
+
+.card__title {
+  margin: 0;
+  font-family: $font-mulish;
+  line-height: 186%;
+  letter-spacing: 1.5px;
+  color: $light-black;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 162%;
+  font-weight: 400;
+  color: $light-black;
+}
+
+.card__information {
+  margin: 0;
+  line-height: 171%;
+  font-weight: 400;
+  color: $grey;
+}
+
+.card__date {
+  margin: 0;
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 400;
+  color: $grey;
+}
+
+.card__button {
+  line-height: 18px;
+  font-weight: 600;
+  color: inherit;
+  background-color: $light-black;
+}

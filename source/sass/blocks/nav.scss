@@ -1,0 +1,14 @@
+.nav__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item + .nav__item {
+  margin-left: 42px;
+}
+
+.nav__item a {
+  color: $white;
+  text-transform: uppercase;
+}

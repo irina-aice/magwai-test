@@ -1,0 +1,19 @@
+.cards {
+  @include container;
+}
+
+.cards__title {
+  margin: 0;
+}
+
+.cards__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.cards__button-wrapper {
+  text-align: center;
+}

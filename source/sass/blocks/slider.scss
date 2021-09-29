@@ -1,0 +1,36 @@
+.slider {
+  min-height: 1034px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+
+  &--first {
+    background-image: url("../img/space.jpg");
+  }
+
+  &--second {
+    background-image: url("../img/car.jpg");
+  }
+
+  &--third {
+    background-image: url("../img/money.jpg");
+  }
+}
+
+.slider__content {
+  @include container;
+}
+
+.slider__title {
+  margin: 0;
+}
+
+.slider__information {
+  margin: 0;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+  color: $dark-white;
+}
