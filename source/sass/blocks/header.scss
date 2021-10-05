@@ -4,6 +4,8 @@
   flex-wrap: wrap;
   align-items: center;
   min-height: 60px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
 .header__list {
@@ -11,4 +13,42 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
+}
+
+.header__item + .header__item {
+  margin-left: 30px;
+}
+
+.header__item--phone {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 93px;
+  min-height: 60px;
+  align-self: center;
+  opacity: 0.4;
+
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border: 1px solid $white;
+    transform: skew(-20deg);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.header__item--phone a {
+  display: block;
 }

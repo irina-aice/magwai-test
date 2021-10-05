@@ -1,5 +1,7 @@
 .cards {
   @include container;
+  padding-top: 53px;
+  padding-bottom: 256px;
 }
 
 .cards__title {
@@ -8,6 +10,7 @@
 
 .cards__list {
   @include reset-list;
+  margin-top: 53px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 30px;
@@ -15,5 +18,6 @@
 }
 
 .cards__button-wrapper {
+  margin-top: 60px;
   text-align: center;
 }

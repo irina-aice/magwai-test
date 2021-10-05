@@ -1,16 +1,31 @@
 .button {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 293px;
   min-height: 60px;
   font-size: 12px;
   line-height: 150%;
   text-transform: uppercase;
   color: inherit;
-  background-color: $beige;
+  cursor: pointer;
 
   &--add {
     @include reset-button;
     font-weight: inherit;
-    background-color: $beige;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to right, $beige 97%, transparent 97% 98%, $white 98%);
+    transform: skew(-20deg);
   }
 }

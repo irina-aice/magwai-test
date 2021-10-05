@@ -1,21 +1,42 @@
 .form__list {
   @include reset-list;
+  max-width: 724px;
+  margin-top: 50px;
+}
+
+.form__item + .form__item {
+  margin-top: 20px;
 }
 
 .form__input,
 .form__textarea {
+  width: 100%;
+  padding-left: 36px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $white;
   background-color: transparent;
+  border: 1px solid $dark-grey;
+}
+
+.form__input {
+  min-height: 70px;
+}
+
+.form__textarea {
+  min-height: 150px;
+  padding-top: 23px;
+  resize: none;
 }
 
 .form__input::placeholder {
   opacity: 1;
+  color: inherit;
 }
 
 .form__agreement {
+  margin: 0 0 0 30px;
   font-weight: 400;
   color: $light-grey;
 }
@@ -23,4 +44,9 @@
 .form__agreement a {
   color: inherit;
   text-decoration: underline;
+}
+
+.form__button-wrapper {
+  margin-top: 20px;
+  display: flex;
 }

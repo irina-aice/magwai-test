@@ -43,11 +43,15 @@
       </ul>
     </nav>
     <ul class="header__list">
-      <li>
-        <a href="tel:+78001111111"></a>
+      <li class="header__item header__item--phone">
+        <a href="tel:+78001111111">
+          <svg width="33" height="32">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
+        </a>
       </li>
-      <li>
-        <a class="button">Оставить заявку</a>
+      <li class="header__item">
+        <a class="button" data-micromodal-trigger="modal-order">Оставить заявку</a>
       </li>
     </ul>
   </header>
@@ -59,21 +63,21 @@
             <div class="slider__content">
               <h2 class="slider__title title">Полет Илона Маска <br>и DOGIE COIN</h2>
               <p class="slider__information">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
-              <a class="button" href="#">оставить заявку</a>
+              <a class="button" data-micromodal-trigger="modal-order">оставить заявку</a>
             </div>
           </div>
           <div class="swiper-slide slider slider--second">
             <div class="slider__content">
               <h2 class="slider__title title">DOGIE COIN <br>УПАЛ</h2>
               <p class="slider__information">Все в шоке, я потерял все деньги</p>
-              <a class="button" href="#">оставить заявку</a>
+              <a class="button" data-micromodal-trigger="modal-order">оставить заявку</a>
             </div>
           </div>
           <div class="swiper-slide slider slider--third">
             <div class="slider__content">
               <h2 class="slider__title title">Эпическое возвращения <br>на хаи</h2>
               <p class="slider__information">Все в шоке, я снова богат</p>
-              <a class="button" href="#">оставить заявку</a>
+              <a class="button" data-micromodal-trigger="modal-order">оставить заявку</a>
             </div>
           </div>
         </div>
@@ -84,8 +88,8 @@
       <h2 class="cards__title title">Карточки</h2>
       <ul class="cards__list">
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-1.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">bridge</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -96,8 +100,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-2.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">Water</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -108,8 +112,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-3.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">bridge</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -120,8 +124,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-4.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">bridge</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -132,8 +136,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-5.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">bridge</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -144,8 +148,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-6.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">forest</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -156,8 +160,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-7.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">bridge</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -168,8 +172,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-8.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">nature</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -180,8 +184,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-9.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">nature</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -192,8 +196,8 @@
           </div>
         </li>
         <li class="card">
-          <img src="" alt="">
-          <div>
+          <img src="img/coin-10.jpg" alt="">
+          <div class="card__inner">
             <h3 class="card__title">nature</h3>
             <p class="card__subtitle">How to increase your productivity with a Music</p>
             <p class="card__information">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium
@@ -210,13 +214,22 @@
     </section>
   </main>
   <section class="modal" id="modal-order" aria-hidden="true">
-    <div tabindex="-1" data-micromodal-close>
-      <div role="dialog" aria-modal="true" aria-labelledby="modal-order-title">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-order-title">
         <div class="modal__image"></div>
         <div class="modal__content">
-          <h3 class="modal__title title">Оставьте заявку</h3>
-          <p class="modal__information">Оставьте заявку и наш менеджер свяжется с вами в течение 10 -15 минут</p>
-          <button data-micromodal-close aria-label="close modal" type="button"></button>
+          <div class="modal__header">
+            <div>
+              <h3 class="modal__title title">Оставьте заявку</h3>
+              <p class="modal__information">Оставьте заявку и наш менеджер свяжется с вами <br>в течение 10 -15 минут
+              </p>
+            </div>
+            <button class="modal__button" data-micromodal-close aria-label="close modal" type="button">
+              <svg width="40" height="40" data-micromodal-close>
+                <use xlink:href="img/sprite.svg#button-close"></use>
+              </svg>
+            </button>
+          </div>
           <form class="form" action="" method="post">
             <ul class="form__list">
               <li class="form__item">
@@ -236,7 +249,7 @@
                 <textarea class="form__textarea" id="modal-question" name="modal-text" type="tel" required>Ваш вопрос*</textarea>
               </li>
             </ul>
-            <div>
+            <div class="form__button-wrapper">
               <button class="form__button button button--add" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
               <p class="form__agreement">Нажимая на кнопку “Оставить заявку” вы соглашаетесь <br><a href="#">с
                 “Пользовательским соглашением”</a></p>

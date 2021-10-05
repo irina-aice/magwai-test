@@ -2,6 +2,13 @@
   background-color: $white;
 }
 
+.card__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 25px 24px 30px 24px;
+}
+
 .card__title {
   margin: 0;
   font-family: $font-mulish;
@@ -12,7 +19,7 @@
 }
 
 .card__subtitle {
-  margin: 0;
+  margin: 20px 0 0 0;
   font-size: 16px;
   line-height: 162%;
   font-weight: 400;
@@ -20,14 +27,14 @@
 }
 
 .card__information {
-  margin: 0;
+  margin: 20px 0 0 0;
   line-height: 171%;
   font-weight: 400;
   color: $grey;
 }
 
 .card__date {
-  margin: 0;
+  margin: 20px 0 25px 0;
   font-size: 12px;
   line-height: 2;
   font-weight: 400;
@@ -35,8 +42,18 @@
 }
 
 .card__button {
+  display: flex;
+  min-height: 50px;
+  //margin-top: 25px;
+  //margin-top: auto;
+  justify-content: center;
+  align-items: center;
   line-height: 18px;
   font-weight: 600;
   color: inherit;
   background-color: $light-black;
+}
+
+.card img {
+  width: 100%;
 }
