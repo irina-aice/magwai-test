@@ -17,6 +17,14 @@
   grid-row-gap: 30px;
 }
 
+@media (max-width: $width-only-tablet) {
+  .cards__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
 .cards__button-wrapper {
   margin-top: 60px;
   text-align: center;

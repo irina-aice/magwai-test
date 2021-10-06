@@ -29,3 +29,9 @@
     transform: skew(-20deg);
   }
 }
+
+@media (max-width: $width-only-tablet) {
+  .button {
+    min-width: 200px;
+  }
+}

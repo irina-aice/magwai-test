@@ -9,6 +9,12 @@
   padding: 25px 24px 30px 24px;
 }
 
+@media (max-width: $width-only-tablet) {
+  .card__inner {
+    padding: 20px 15px 25px 15px;
+  }
+}
+
 .card__title {
   margin: 0;
   font-family: $font-mulish;
@@ -26,11 +32,25 @@
   color: $light-black;
 }
 
+@media (max-width: $width-only-tablet) {
+  .card__subtitle {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
+
 .card__information {
   margin: 20px 0 0 0;
   line-height: 171%;
   font-weight: 400;
   color: $grey;
+}
+
+@media (max-width: $width-only-tablet) {
+  .card__information {
+    margin-top: 15px;
+    font-size: 12px;
+  }
 }
 
 .card__date {
@@ -39,6 +59,14 @@
   line-height: 2;
   font-weight: 400;
   color: $grey;
+}
+
+@media (max-width: $width-only-tablet) {
+  .card__date {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 11px;
+  }
 }
 
 .card__button {

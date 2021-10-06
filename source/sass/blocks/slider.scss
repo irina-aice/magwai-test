@@ -1,11 +1,11 @@
 .slider {
   min-height: 1034px;
+  display: flex;
+  align-items: flex-end;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  align-items: flex-end;
 
   &--first {
     background-image: url("../img/space.jpg");
@@ -20,9 +20,24 @@
   }
 }
 
+@media (max-width: $width-only-tablet) {
+  .slider {
+    min-height: 414px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-size: contain;
+  }
+}
+
 .slider__content {
   @include container;
   margin-bottom: 177px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .slider__content {
+    margin-bottom: 40px;
+  }
 }
 
 .slider__title {
@@ -35,4 +50,12 @@
   line-height: 150%;
   font-weight: 400;
   color: $dark-white;
+}
+
+@media (max-width: $width-only-tablet) {
+  .slider__information {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
 }

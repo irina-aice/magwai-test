@@ -3,3 +3,10 @@
   line-height: 51px;
   text-transform: uppercase;
 }
+
+@media (max-width: $width-only-tablet) {
+  .title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}

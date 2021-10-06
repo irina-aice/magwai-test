@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +9,23 @@
   <link rel="preload" href="fonts/mulish-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/mulish-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
 </head>
-<body>
-  <header class="header">
-    <a class="logo">
-      <svg width="157" height="60">
-        <use xlink:href="img/sprite.svg#logo"></use>
-      </svg>
-    </a>
+<body class="js-page page">
+  <header class="js-header header header--closed">
+    <div class="header__button-wrapper">
+      <button class="js-header-menu-button header__button" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <a class="logo">
+        <svg width="157" height="60">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item">
@@ -75,7 +84,7 @@
           </div>
           <div class="swiper-slide slider slider--third">
             <div class="slider__content">
-              <h2 class="slider__title title">Эпическое возвращения <br>на хаи</h2>
+              <h2 class="slider__title title">Эпическое возвращение <br>на хаи</h2>
               <p class="slider__information">Все в шоке, я снова богат</p>
               <a class="button" data-micromodal-trigger="modal-order">оставить заявку</a>
             </div>
