@@ -35,3 +35,15 @@
     min-width: 200px;
   }
 }
+
+@media (max-width: $width-only-mobile) {
+  .button {
+    min-width: auto;
+    width: 100%;
+
+    &::before {
+      right: 10px;
+      left: 10px;
+    }
+  }
+}

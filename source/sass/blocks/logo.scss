@@ -1,3 +1,14 @@
 .logo {
   display: block;
 }
+
+.logo svg {
+  display: block;
+}
+
+@media (max-width: $width-only-mobile) {
+  .logo svg {
+    width: 100px;
+    height: auto;
+  }
+}

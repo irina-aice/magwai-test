@@ -27,6 +27,12 @@
   overflow-y: auto;
 }
 
+@media (max-width: $width-only-tablet) {
+  .modal__container {
+    max-width: 700px;
+  }
+}
+
 .modal__image {
   width: 40%;
   max-width: 818px;
@@ -36,12 +42,28 @@
   //background-size: cover;
 }
 
+@media (max-width: $width-only-tablet) {
+  .modal__image {
+    display: none;
+  }
+}
+
 .modal__content {
   height: 100%;
   width: 60%;
   min-width: 800px;
   padding: 76px 90px 138px 95px;
   background-color: $black;
+}
+
+@media (max-width: $width-only-tablet) {
+  .modal__content {
+    width: auto;
+    min-width: auto;
+    //transform: skew(-15deg);
+    //background: linear-gradient(-85deg, transparent 30px, $black 30px 670px, transparent 670px);
+    //background: repeating-linear-gradient(-85deg, transparent -50px 5px, $black 5px 660px);
+  }
 }
 
 .modal__header {

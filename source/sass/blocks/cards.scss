@@ -4,6 +4,19 @@
   padding-bottom: 256px;
 }
 
+@media (max-width: $width-only-tablet) {
+  .cards {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .cards {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+
 .cards__title {
   margin: 0;
 }
@@ -22,6 +35,15 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .cards__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-top: 20px;
   }
 }
 

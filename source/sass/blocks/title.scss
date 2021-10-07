@@ -10,3 +10,11 @@
     line-height: 40px;
   }
 }
+
+@media (max-width: $width-only-mobile) {
+  .title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
