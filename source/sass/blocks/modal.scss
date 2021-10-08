@@ -23,23 +23,65 @@
   position: relative;
   display: flex;
   max-width: 1727px;
-  max-height: 95vh;
-  overflow-y: auto;
+  //padding-left: 40%;
+}
+
+.modal__container::before {
+  content: "";
+  width: 820px;
+}
+
+.modal__container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  width: 400px;
+  height: 100%;
+  background-color: $dark-black;
 }
 
 @media (max-width: $width-only-tablet) {
   .modal__container {
     max-width: 700px;
+    padding-left: 0;
+  }
+
+  .modal__container::before,
+  .modal__container::after {
+    display: none;
   }
 }
 
 .modal__image {
-  width: 40%;
-  max-width: 818px;
-  min-width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //width: 40%;
+  //max-width: 818px;
+  //min-width: 300px;
+  width: 819px;
+  height: 100%;
+  background-color: $dark-black;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  //background-image: url("../img/moon.jpg");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+}
+
+.modal__image::before {
+  content: "";
+  margin: auto;
+  width: 819px;
+  height: 880px;
   background-image: url("../img/moon.jpg");
   background-repeat: no-repeat;
-  //background-size: cover;
 }
 
 @media (max-width: $width-only-tablet) {
@@ -49,18 +91,21 @@
 }
 
 .modal__content {
-  height: 100%;
-  width: 60%;
-  min-width: 800px;
+  position: relative;
+  //height: 100%;
+  //width: 60%;
+  //min-width: 800px;
   padding: 76px 90px 138px 95px;
   background-color: $black;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  //010101 - background of the moon image
 }
 
 @media (max-width: $width-only-tablet) {
   .modal__content {
     width: auto;
     min-width: auto;
-    //transform: skew(-15deg);
+    //transform: skew(-5deg);
     //background: linear-gradient(-85deg, transparent 30px, $black 30px 670px, transparent 670px);
     //background: repeating-linear-gradient(-85deg, transparent -50px 5px, $black 5px 660px);
   }

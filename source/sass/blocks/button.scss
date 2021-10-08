@@ -21,9 +21,9 @@
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
+    right: 10px;
     bottom: 0;
-    left: 0;
+    left: 10px;
     z-index: -1;
     background: linear-gradient(to right, $beige 97%, transparent 97% 98%, $white 98%);
     transform: skew(-20deg);
@@ -40,10 +40,5 @@
   .button {
     min-width: auto;
     width: 100%;
-
-    &::before {
-      right: 10px;
-      left: 10px;
-    }
   }
 }

@@ -1,3 +1,8 @@
+.form {
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
 .form__list {
   @include reset-list;
   max-width: 724px;
