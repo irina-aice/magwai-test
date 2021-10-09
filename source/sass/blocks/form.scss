@@ -9,12 +9,17 @@
   margin-top: 50px;
 }
 
+.form__item {
+  position: relative;
+}
+
 .form__item + .form__item {
   margin-top: 20px;
 }
 
 .form__input,
 .form__textarea {
+  display: block;
   width: 100%;
   padding-left: 36px;
   font-size: 16px;
@@ -25,8 +30,34 @@
   border: 1px solid $dark-grey;
 }
 
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-left: 36px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.form__label,
 .form__input {
-  min-height: 70px;
+  padding-top: 23px;
+  padding-bottom: 27px;
+}
+
+.form__item>.form__input:not(:placeholder-shown),
+.form__input:focus {
+  padding-top: 33px;
+  padding-bottom: 17px;
+}
+
+.form__item>.form-input:focus~.form__label,
+.form__item>.form-input:not(:placeholder-shown)~label {
+  opacity: 0.5;
+  //transform: scale(.85) translateY(-.5rem) translateX(.15rem);
 }
 
 .form__textarea {
