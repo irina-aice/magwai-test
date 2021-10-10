@@ -48,16 +48,23 @@
   padding-bottom: 27px;
 }
 
+.form__input:focus,
+.form__input:active,
+.form__textarea:focus,
+.form__textarea:active {
+  border-color: $white;
+}
+
 .form__item>.form__input:not(:placeholder-shown),
 .form__input:focus {
   padding-top: 33px;
   padding-bottom: 17px;
 }
 
-.form__item>.form-input:focus~.form__label,
-.form__item>.form-input:not(:placeholder-shown)~label {
+.form__item>.form__input:focus~.form__label,
+.form__item>.form__input:not(:placeholder-shown)~label {
   opacity: 0.5;
-  //transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+  transform: scale(.85) translateY(-10px);
 }
 
 .form__textarea {
