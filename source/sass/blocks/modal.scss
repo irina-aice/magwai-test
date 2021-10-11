@@ -23,12 +23,18 @@
   position: relative;
   display: flex;
   max-width: 1727px;
-  //padding-left: 40%;
 }
 
 .modal__container::before {
   content: "";
   width: 820px;
+  flex: 0 1 auto;
+}
+
+@media (max-width: $width-only-modal-desktop) {
+  .modal__container::before {
+    width: 420px;
+  }
 }
 
 .modal__container::after {
@@ -63,16 +69,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //width: 40%;
-  //max-width: 818px;
-  //min-width: 300px;
   width: 819px;
   height: 100%;
   background-color: $dark-black;
   clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
-  //background-image: url("../img/moon.jpg");
-  //background-repeat: no-repeat;
-  //background-size: cover;
 }
 
 .modal__image::before {
@@ -92,22 +92,24 @@
 
 .modal__content {
   position: relative;
-  //height: 100%;
-  //width: 60%;
-  //min-width: 800px;
   padding: 76px 90px 138px 95px;
   background-color: $black;
   clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
-  //010101 - background of the moon image
+  flex: 0 0 auto;
 }
 
 @media (max-width: $width-only-tablet) {
   .modal__content {
     width: auto;
     min-width: auto;
-    //transform: skew(-5deg);
-    //background: linear-gradient(-85deg, transparent 30px, $black 30px 670px, transparent 670px);
-    //background: repeating-linear-gradient(-85deg, transparent -50px 5px, $black 5px 660px);
+    flex: 0 1 auto;
+    padding-bottom: 76px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .modal__content {
+    padding: 20px 30px;
   }
 }
 
@@ -120,8 +122,14 @@
   margin: 0;
 }
 
+@media (max-width: $width-only-mobile) {
+  .modal__title {
+    text-align: left;
+  }
+}
+
 .modal__information {
-  margin: 20px 0 0 0;
+  margin: 0;
   font-weight: 400;
   color: $light-grey;
 }
@@ -135,6 +143,7 @@
   min-height: 70px;
   border: 1px solid $white;
   transform: skew(-20deg);
+  margin-right: 15px;
 
   &:hover,
   &:active,
@@ -143,6 +152,25 @@
   }
 }
 
+@media (max-width: $width-only-tablet) {
+  .modal__button {
+    min-width: 50px;
+    min-height: 30px;
+  }
+}
+
 .modal__button svg {
   transform: skew(20deg);
+}
+
+@media (max-width: $width-only-tablet) {
+  .modal__button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.modal__inner {
+  max-height: 90vh;
+  overflow-y: auto;
 }

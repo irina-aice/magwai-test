@@ -14,11 +14,14 @@
 
       const card = data[i];
       const cardElement = cardTemplate.cloneNode(true);
+      const cardElementLi = cardElement.querySelector('.card');
 
       cardElement.querySelector('.card__image').src = photoUrl;
 
       cardElement.querySelector('.card__subtitle').textContent = card.title;
       cardElement.querySelector('.card__information').textContent = card.body;
+
+      gsap.fromTo(cardElementLi, {autoAlpha: 0, scale: 0.8}, {autoAlpha: 1, scale: 1, duration: 0.5});
 
       cardList.appendChild(cardElement);
     }
@@ -42,7 +45,6 @@
 
   const cardAddButton = document.querySelector('.cards__button');
   cardAddButton.addEventListener('click', () => {
-    console.log('click');
     fetchData(onFetchSuccess);
   })
 })();

@@ -95,7 +95,7 @@
     </section>
     <section class="cards">
       <h2 class="cards__title title">Карточки</h2>
-      <ul class="cards__list">
+      <ul class="cards__list js-card-list">
         <li class="card">
           <img src="img/coin-1.jpg" alt="">
           <div class="card__inner">
@@ -227,43 +227,44 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-order-title">
         <div class="modal__image"></div>
         <div class="modal__content">
-          <div class="modal__header">
-            <div>
+          <div class="modal__inner">
+            <div class="modal__header">
               <h3 class="modal__title title">Оставьте заявку</h3>
-              <p class="modal__information">Оставьте заявку и наш менеджер свяжется с вами <br>в течение 10 -15 минут
-              </p>
+              <button class="modal__button" data-micromodal-close aria-label="close modal" type="button">
+                <svg width="40" height="40" data-micromodal-close>
+                  <use xlink:href="img/sprite.svg#button-close"></use>
+                </svg>
+              </button>
             </div>
-            <button class="modal__button" data-micromodal-close aria-label="close modal" type="button">
-              <svg width="40" height="40" data-micromodal-close>
-                <use xlink:href="img/sprite.svg#button-close"></use>
-              </svg>
-            </button>
+            <p class="modal__information">
+              Оставьте заявку и наш менеджер свяжется с вами <br>в течение 10 -15 минут
+            </p>
+            <form class="form" action="" method="post">
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="form__input" id="modal-name" name="modal-name" type="text" placeholder="Ваше имя*" required>
+                  <label class="form__label" for="modal-name">Ваше имя*</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__input" id="modal-email" name="modal-email" type="email" placeholder="" value="MAGWAI@info.ru" required>
+                  <label class="form__label" for="modal-email">E-mail*</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__input" id="modal-phone" name="modal-phone" type="tel" placeholder="+7(___)" required>
+                  <label class="form__label" for="modal-phone">+7(___)</label>
+                </li>
+                <li class="form__item">
+                  <textarea class="form__textarea" id="modal-question" name="modal-text" type="tel" placeholder="" required></textarea>
+                  <label class="form__label" for="modal-question">Ваш вопрос*</label>
+                </li>
+              </ul>
+              <div class="form__button-wrapper">
+                <button class="form__button button button--add" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+                <p class="form__agreement">Нажимая на кнопку “Оставить заявку” вы соглашаетесь <br><a href="#">с
+                  “Пользовательским соглашением”</a></p>
+              </div>
+            </form>
           </div>
-          <form class="form" action="" method="post">
-            <ul class="form__list">
-              <li class="form__item">
-                <input class="form__input" id="modal-name" name="modal-name" type="text" placeholder="Ваше имя*" required>
-                <label class="form__label" for="modal-name">Ваше имя*</label>
-              </li>
-              <li class="form__item">
-                <input class="form__input" id="modal-email" name="modal-email" type="email" placeholder="" value="MAGWAI@info.ru" required>
-                <label class="form__label" for="modal-email">E-mail*</label>
-              </li>
-              <li class="form__item">
-                <input class="form__input" id="modal-phone" name="modal-phone" type="tel" placeholder="+7(___)" required>
-                <label class="form__label" for="modal-phone">+7(___)</label>
-              </li>
-              <li class="form__item">
-                <textarea class="form__textarea" id="modal-question" name="modal-text" type="tel" required>Ваш вопрос*</textarea>
-                <label class="form__label" for="modal-question">Ваш вопрос*</label>
-              </li>
-            </ul>
-            <div class="form__button-wrapper">
-              <button class="form__button button button--add" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
-              <p class="form__agreement">Нажимая на кнопку “Оставить заявку” вы соглашаетесь <br><a href="#">с
-                “Пользовательским соглашением”</a></p>
-            </div>
-          </form>
         </div>
       </div>
     </div>

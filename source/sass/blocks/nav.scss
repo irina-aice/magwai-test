@@ -1,12 +1,12 @@
 @media (max-width: $width-only-tablet) {
   .nav {
-    padding-top: 54px;
+    min-height: calc(100vh - 60px);
   }
 }
 
 @media (max-width: $width-only-mobile) {
   .nav {
-    padding-top: 15px;
+    min-height: auto;
   }
 }
 
@@ -18,13 +18,14 @@
 
 @media (max-width: $width-only-tablet) {
   .nav__list {
+    padding-top: 54px;
     flex-direction: column;
-    margin-bottom: 392px;
   }
 }
 
 @media (max-width: $width-only-mobile) {
   .nav__list {
+    padding-top: 15px;
     margin-bottom: 51px;
   }
 }
