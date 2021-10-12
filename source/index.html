@@ -229,7 +229,7 @@
         <div class="modal__content">
           <div class="modal__inner">
             <div class="modal__header">
-              <h3 class="modal__title title">Оставьте заявку</h3>
+              <h3 class="modal__title title" id="modal-order-title">Оставьте заявку</h3>
               <button class="modal__button" data-micromodal-close aria-label="close modal" type="button">
                 <svg width="40" height="40" data-micromodal-close>
                   <use xlink:href="img/sprite.svg#button-close"></use>
@@ -239,7 +239,7 @@
             <p class="modal__information">
               Оставьте заявку и наш менеджер свяжется с вами <br>в течение 10 -15 минут
             </p>
-            <form class="js-form form" action="" method="post" novalidate>
+            <form class="js-form form" action="/" method="post" novalidate>
               <ul class="form__list">
                 <li class="form__item">
                   <input class="js-form-input form__input" id="modal-name" name="modal-name" type="text" placeholder="Ваше имя*" required>
@@ -254,7 +254,7 @@
                   <label class="form__label" for="modal-phone">+7(___)</label>
                 </li>
                 <li class="form__item">
-                  <textarea class="js-form-textarea form__textarea" id="modal-question" name="modal-text" type="tel" placeholder="" required></textarea>
+                  <textarea class="js-form-textarea form__textarea" id="modal-question" name="modal-text" placeholder="" required></textarea>
                   <label class="form__label" for="modal-question">Ваш вопрос*</label>
                 </li>
               </ul>
