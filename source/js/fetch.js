@@ -21,7 +21,7 @@
       cardElement.querySelector('.card__subtitle').textContent = card.title;
       cardElement.querySelector('.card__information').textContent = card.body;
 
-      gsap.fromTo(cardElementLi, {autoAlpha: 0, scale: 0.8}, {autoAlpha: 1, scale: 1, duration: 0.5});
+      window.gsap.fromTo(cardElementLi, {autoAlpha: 0, scale: 0.8}, {autoAlpha: 1, scale: 1, duration: 0.5});
 
       cardList.appendChild(cardElement);
     }
@@ -32,7 +32,7 @@
       `https://jsonplaceholder.typicode.com/posts?${Math.random()}`,
       {
         method: 'GET',
-        cache: 'no-cache'
+        cache: 'no-cache',
       },
     ).then((response) => {
       if (response.ok) {
@@ -46,5 +46,5 @@
   const cardAddButton = document.querySelector('.cards__button');
   cardAddButton.addEventListener('click', () => {
     fetchData(onFetchSuccess);
-  })
+  });
 })();

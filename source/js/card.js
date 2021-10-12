@@ -5,18 +5,22 @@
   const cardSelector = '.js-card-list > .card';
   let currentElem = null;
 
+  if (!cardList) {
+    return false;
+  }
+
   if (!window.matchMedia('(min-width: 1024px)').matches) {
     return false;
   }
 
-  gsap.registerPlugin(ScrollTrigger);
+  window.gsap.registerPlugin(window.ScrollTrigger);
 
-  gsap.set(cardSelector, {autoAlpha: 0, yPercent: 30});
+  window.gsap.set(cardSelector, {autoAlpha: 0, yPercent: 30});
 
-  ScrollTrigger.batch(cardSelector, {
+  window.ScrollTrigger.batch(cardSelector, {
     start: 'top 90%',
     onEnter: function (batch) {
-      gsap.to(batch, {
+      window.gsap.to(batch, {
         autoAlpha: 1,
         yPercent: 0,
         duration: 1,
@@ -25,15 +29,13 @@
         stagger: {
           each: 0.15,
           grid: [1, 5],
-          axis: 'x'
-        }
+          axis: 'x',
+        },
       });
-    }
+    },
   });
 
-  ScrollTrigger.addEventListener('refreshInit', function () {
-    return gsap.set(cardSelector, {yPercent: 0});
-  });
+  window.ScrollTrigger.addEventListener('refreshInit', () => window.gsap.set(cardSelector, {yPercent: 0}));
 
   cardList.addEventListener('mouseover', (evt) => {
     if (currentElem) {
@@ -48,7 +50,7 @@
 
     currentElem = card;
 
-    gsap.to(currentElem, {duration: 0.35, scale: 1.05});
+    window.gsap.to(currentElem, {duration: 0.35, scale: 1.05});
   });
 
   cardList.addEventListener('mouseout', (evt) => {
@@ -61,13 +63,15 @@
     while (relatedTarget) {
       // поднимаемся по дереву элементов и проверяем – внутри ли мы currentElem или нет
       // если да, то это переход внутри элемента – игнорируем
-      if (relatedTarget === currentElem) return false;
+      if (relatedTarget === currentElem) {
+        return false;
+      }
 
       relatedTarget = relatedTarget.parentNode;
     }
 
     // мы действительно покинули элемент
-    gsap.to(currentElem, {duration: 0.35, scale: 1});
+    window.gsap.to(currentElem, {duration: 0.35, scale: 1});
     currentElem = null;
   });
 

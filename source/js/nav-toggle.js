@@ -19,13 +19,13 @@
     header.classList.remove(headerClosedClass);
     header.classList.add(headerOpenedClass);
     page.classList.add(pageNavOpenedClass);
-  }
+  };
 
   const close = function () {
     header.classList.remove(headerOpenedClass);
     header.classList.add(headerClosedClass);
     page.classList.remove(pageNavOpenedClass);
-  }
+  };
 
   headerButton.addEventListener('click', () => {
     if(header.classList.contains(headerClosedClass)) {
@@ -33,5 +33,5 @@
     } else {
       close();
     }
-  })
+  });
 })();

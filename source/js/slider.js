@@ -2,18 +2,18 @@
 
 (function () {
   const slider = document.querySelector('.js-slider');
-  const pagination = document.querySelector('.js-slider-pagination');
+  const paginationElement = document.querySelector('.js-slider-pagination');
 
-  if (!slider || !pagination) {
+  if (!slider || !paginationElement) {
     return false;
   }
 
-  let mySlider = new window.Swiper(slider, {
+  const mySlider = new window.Swiper(slider, {
     pagination: {
-      el: pagination,
+      el: paginationElement,
       clickable: true,
       type: 'custom',
-      renderCustom: function (swiper, current, total) {
+      renderCustom: function (swiper) {
         let pagination = '';
 
         for (let i = 0; i < swiper.slides.length; i++) {
@@ -40,7 +40,7 @@
     },
   });
 
-  pagination.addEventListener('click', (evt) => {
+  paginationElement.addEventListener('click', (evt) => {
     const button = evt.target;
     const index = Array.from(button.parentNode.children).indexOf(button);
     mySlider.slideTo(index);
